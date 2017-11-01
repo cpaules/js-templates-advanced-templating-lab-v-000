@@ -10,15 +10,10 @@
     <main id="main">
     </main>
 
-    <script id="my-template" type="text/x-handlebars-template">
-      <div id="recipe">
-        <p>{{description}}</p>
-        <ul>
-          {{#each ingredients}}
-          <li>{{name}}</li>
-          {{/each}}
-        </ul>
-      </div>
+    <script id="recipe-form-template" type="text/x-handlebars-template">
+      <form id="recipe-form" onsubmit="{{submitAction}}; return false;">
+        <div>{{> recipeFormPartial}}</div>
+      </form>
     </script>
     
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
