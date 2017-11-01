@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
 
-function HandlebarsSetup() {
+function handlebarsSetup() {
 	Handlebars.registerPartial("recipeDetailsPartial", document.getElementById("recipe-details-partial").innerHTML)
 	Handlebars.registerPartial("recipeFormPartial", document.getElementById("recipe-form-partial").innerHTML)
 	Handlebars.registerHelper("displayIngredient", function(ingredient) {
@@ -58,7 +58,6 @@ function displayEditForm() {
 	 }
 
     let recipe = {name, description, ingredients, submitAction: "updateRecipe()"}
-
     let template = document.getElementById("recipe-form-template").innerHTML
     let compiled = Handlebars.compile(template)
     document.getElementById("main").innerHTML = compiled(recipe)
