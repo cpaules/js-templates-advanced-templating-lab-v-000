@@ -32,7 +32,7 @@ function createRecipe() {
 function gatherRecipeInfo() {
 	let name = document.getElementById('name').value
 	let description = document.getElementById('description').value
-	let ingredientNodes = document.getElementsByName('ingredients') 
+	let ingredientNodes = document.getElementsByName('ingredients')
 
 	let ingredients = []
 
@@ -41,7 +41,7 @@ function gatherRecipeInfo() {
 			ingredients.push(ingredientNodes[i].value)
 		}
 	}
-	
+
 	let recipe = {name, description, ingredients}
 	return recipe
 }
@@ -70,4 +70,3 @@ function updateRecipe() {
   let compiledTemplate = Handlebars.compile(recipeTemplate)
   document.getElementById("main").innerHTML = compiledTemplate(recipe)
 }
-
